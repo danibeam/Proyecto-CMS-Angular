@@ -1,0 +1,40 @@
+  <div class="container">
+    <div class="row">  
+      <div class="col-sm-12 col-md-12" style="min-height:500px;">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Bienvenido a {{ title }} <small>Prueba {{ cliente }}</small></h1>
+              <hr>
+              <p>Elija cualquiera de las opciones del panel de administraci&oacute;n</p>
+              <div class="row container">
+                <div class="col-md-4 panel">
+                  <a href="#" (click)="respuestaProductos()">
+                    <span class="glyphicon glyphicon-folder-open"></span>
+                    <h3 class="text-center">Productos</h3>
+                  </a>
+                </div>
+                <div class="col-md-4 panel">
+                    <a href="#" (click)="respuestaCategorias()">
+                      <span class="glyphicon glyphicon-th-list"></span>
+                      <h3 class="text-center">Categor&iacute;as</h3>
+                    </a>
+                </div>
+                <div class="col-md-4 panel">
+                  <a href="#" (click)="respuestaColores()">
+                    <span class="glyphicon glyphicon-equalizer"></span>
+                    <h3 class="text-center">Colores</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="app-productos" style="display:none;"></div>
+              <div class="app-categorias" style="display:none;"></div>
+              <div class="app-colores" style="display:none;"></div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>

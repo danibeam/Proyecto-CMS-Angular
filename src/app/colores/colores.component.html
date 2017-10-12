@@ -1,0 +1,59 @@
+<h2>Editar Colores</h2>
+<div class="row">
+    <div class="table-responsive col-md-12">
+        <table class="table table-hover">
+            <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre Color</th>
+                        <th>Cantidad de productos</th>
+                        <th>Acci&oacute;n</th>
+                    </tr>
+            </thead>
+            <tbody>
+                    <tr *ngFor="let color of colores; let i = index">
+                            <td>{{ color.id }}</td>
+                            <td><button class="btn"style="color: white; width: 100px;" [style.background-color] = "color.codigo">{{ color.nombre }}</button></td>
+                            <td>{{ color.productos }}</td>
+                            <td>
+                                <a href="#editarColor" id="{{i+1}}" title="Editar" (click)="editarColor(i)"><span class="glyphicon glyphicon-pencil"></span></a>&nbsp;
+                                <a href="" id="{{i+1}}" title="Eliminar" (click)="eliminarColor(i)"><span class="glyphicon glyphicon-trash"></span></a>
+                            </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-info" (click)="crearColor()">Crear Color</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" style="display:none;" id="editarColor">
+        <h3>Editar Color</h3>
+        <form>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="idColor">Id:</label>
+                    <input type="text" class="form-control" id="idColor">
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre color:</label>
+                    <input type="text" class="form-control" id="nombreColor">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="productos">Cantidad de productos:</label>
+                    <input type="text" class="form-control" id="productos">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-info">Guardar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
